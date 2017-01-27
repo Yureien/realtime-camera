@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RealTime Camera</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_about_text">About</string>
+    <string name="nav_about_dev_text">About the developer</string>
+    <string name="nav_donate_text">Donate</string>
+    <string name="control_panel_fragment_name">Control Panel</string>
+    <string name="camera_fragment_name">Camera Preview</string>
+    <string name="settings_fragment_name">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="port_text">Port (Between 1024 and 65535):</string>
+    <string name="default_port">8080</string>
+    <string name="server_label">Server will be hosted on:</string>
+    <string name="server_address_not_running">Server not yet started</string>
+    <string name="server_status_label">Server Status</string>
+    <string name="server_not_running">Not Running</string>
+    <string name="server_running">Running</string>
+</resources>

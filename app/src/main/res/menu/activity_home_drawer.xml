@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO: Update the icons -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_control_panel"
+            android:title="@string/control_panel_fragment_name" />
+        <item
+            android:id="@+id/nav_camera_preview"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/camera_fragment_name" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/settings_fragment_name" />
+    </group>
+
+    <item android:title="@string/nav_about_text">
+        <menu>
+            <item
+                android:id="@+id/nav_about_dev"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/nav_about_dev_text" />
+            <item
+                android:id="@+id/nav_donate"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/nav_donate_text" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sohamsendev.realtime_camera.activities.ControlPanelFragment">
+
+    <TextView
+        android:id="@+id/port_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/port_text"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/port_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/port_label"
+        android:layout_margin="@dimen/port_margin"
+        android:inputType="number"
+        android:maxLength="5"
+        android:text="@string/default_port" />
+
+    <TextView
+        android:id="@+id/server_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/port_number"
+        android:text="@string/server_label"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/server_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/server_label"
+        android:layout_margin="@dimen/server_address_margin"
+        android:editable="false"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:id="@+id/server_status_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/server_address"
+        android:gravity="center"
+        android:text="@string/server_status_label"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/server_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/server_status_label"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/server_status_margin"
+        android:background="@color/stopServerBackgroundTint"
+        android:padding="@dimen/server_status_padding"
+        android:text="@string/server_not_running"
+        android:textColor="@color/stopServerTint"
+        android:textSize="24sp"
+        android:textStyle="normal|bold" />
+
+    <!-- TODO: Add a more suitable icon for the button -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:tint="@color/stopServerTint"
+        app:backgroundTint="@color/stopServerBackgroundTint"
+        app:srcCompat="@drawable/ic_settings_power_black_24dp" />
+
+</RelativeLayout>
