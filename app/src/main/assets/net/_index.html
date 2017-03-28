@@ -1,1 +1,71 @@
-/root/Documents/SoftwareDevelopment/HTML Lab/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RealTime Camera</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.css"
+          media="screen,projection"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="materialize/js/materialize.js"></script>
+</head>
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a href="http://sohamsen.comxa.com" class="brand-logo" id="logo-container">Soham Sen
+            Dev.</a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="">Home</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="section no-pad-bot">
+    <div class="container" id="banner">
+        <h1 class="header center orange-text">RealTime Camera</h1>
+        <div class="row center">
+            <h5 class="header col s12 light" id="header-text">A simple but powerful remote
+                camera-control app</h5>
+        </div>
+    </div>
+    <div class="container" id="playback">
+        <br><br>
+        <div class="row center">
+            <img id="playback-image" width=1024 height=576 style="background-color:#000;"/>
+        </div>
+        <div class="row center">
+            <a class="waves-effect waves-light orange btn-large" id="btn-start">Start</a>
+            <script type="text/javascript">
+                        $("#playback-image").hide();
+                        var imageWillWork = false;
+                        var imageSrc = "<!playback-url!>/";
+                        $("#playback-image").attr("src", imageSrc + "?random=" + new Date().getTime());
+                        
+                        $("#btn-start").click(function() {
+                            $("#header-text").slideToggle();
+                            $("#playback-image").slideToggle();
+                            var text = $("#btn-start").text();
+                            $("#btn-start").text(text == "Start" ? "Stop" : "Start");
+                            $.post("", { start: text });
+                            imageWillWork = text == "Start" ? true : false;
+                            if (imageWillWork) $("#playback-image").attr("src", imageSrc + "?random=" + new Date().getTime());
+                        });
+                        $('#playback-image').error(function() {
+                            if (imageWillWork) {
+                                var src = this.src;
+                                this.src = imageSrc + "?random=" + new Date().getTime();
+                            }
+                        });
+
+
+
+
+
+            </script>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
